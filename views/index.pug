@@ -1,0 +1,14 @@
+html
+  head
+    title= title
+  body
+    h1= 'Titulos de las películas'
+    ul
+      each res, key in movies
+        li
+          h2= res.title
+        h4= 'Planetas'
+        ul
+          each val, key in res.planets
+            li= val.name
+        

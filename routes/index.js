@@ -72,13 +72,16 @@ route.get('/planet/:id', async function(req, res) {
 
 route.get('/people/:id', async function(req, res) {
   const people = await allPeoples(req.params.id);
+
+  /* 
+    El arreglo devuelto tiene una unica posición
+  */
   
-  res.render('people', {people});
+  res.render('people', {people: people[0]});
 });
 
 route.get('/specie/:id', async function(req, res) {
   const specie = await allSpecies(req.params.id);
-  // console.log('Specie', specie);
   res.render('specie', {specie});
 });
 

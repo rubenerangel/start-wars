@@ -7,15 +7,16 @@ block content
   
   .col-6.mx-auto.shadow.rounded.p-3.mt-3
     .row
-      .col-4 Name
-      .col-8.border-left= specie.name
-      .col-4 Language
-      .col-8.border-left= specie.language
-      .col-4 Average Height
-      .col-8.border-left= specie.average_height
+      .col-4.text-right.font-weight-bold Name
+      .col-8.border-left.text-capitalize= specie.name
+      .col-4.text-right.font-weight-bold Language
+      .col-8.border-left.text-capitalize= specie.language
+      .col-4.text-right.font-weight-bold Average Height
+      .col-8.border-left.text-capitalize= specie.average_height
   
-  .row.pt-3
-    .col-1.mx-auto
-      a(href=`javascript:history.back()` title=`Go Back`)
-        i.fa.fa-arrow-circle-left.fa-4x
+  block goback
+    .row.pt-3
+      .col-1.mx-auto
+        a(href=`javascript:history.back()` title=`Go Back`)
+          i.fa.fa-arrow-circle-left.fa-4x
       

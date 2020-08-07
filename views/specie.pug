@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  
+  .col-12.text-center.my-2
+    h2= `Specie: ${specie.name}`
+  
+  .col-6.mx-auto.shadow.rounded.p-3.mt-3
+    .row
+      .col-4 Name
+      .col-8.border-left= specie.name
+      .col-4 Language
+      .col-8.border-left= specie.language
+      .col-4 Average Height
+      .col-8.border-left= specie.average_height
+      

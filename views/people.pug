@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  
+  .col-12.text-center.my-2
+    h2= `People: ${people.name}`
+  
+  .col-6.mx-auto.shadow.rounded.p-3.mt-3
+    .row
+      .col-4 Name
+      .col-8.border-left= people.name
+      .col-4 Gender
+      .col-8.border-left= people.gender
+      .col-4 Hair Color
+      .col-8.border-left= people.hair_color
+      .col-4 Skin Color
+      .col-8.border-left= people.skin_color
+      .col-4 Eye Color
+      .col-8.border-left= people.eye_color
+      .col-4 Height
+      .col-8.border-left= people.height
+      .col-4 Homeworld
+      .col-8.border-left= people.url

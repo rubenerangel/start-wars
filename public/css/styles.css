@@ -1,0 +1,15 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.card-body .title {
+  font-weight: bold;
+}
+
+.card-body ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 300;
+}

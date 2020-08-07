@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  
+  .col-12.text-center.my-2
+    h2= `Planet: ${planet.name}`
+  
+  .col-6.mx-auto.shadow.rounded.p-3.mt-3
+    .row
+      .col-4 Terrain
+      .col-8.border-left= planet.terrain
+      .col-4 Gravity
+      .col-8.border-left= planet.gravity
+      .col-4 Diameter
+      .col-8.border-left= planet.diameter
+      .col-4 Population
+      .col-8.border-left= planet.population

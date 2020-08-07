@@ -1,14 +1,47 @@
-html
-  head
-    title= title
-  body
-    h1= 'Titulos de las películas'
-    ul
-      each res, key in movies
-        li
-          h2= res.title
-        h4= 'Planetas'
-        ul
-          each val, key in res.planets
-            li= val.name
-        
+extends layout
+
+block content
+  .row.shadow
+    .col-12.text-center.p-3.mb-2
+      h3= `Nave más grande: ${startship.name}`
+    hr.dropdown-divider
+    .col-12
+      .row.p-2
+        .col-2.text-center.font-weight-bold
+          span.align-middle Modelo
+        .col-2.border-left.shadow-sm= startship.model
+        .col-2.border-left.text-center.font-weight-bold.align-middle Manufacturer
+        .col-2.border-left.shadow-sm= startship.manufacturer
+        .col-2.border-left.text-center.font-weight-bold.align-middle Passengers
+        .col-2.border-left.shadow-sm= startship.passengers
+
+
+  .col-12.text-center.my-2
+    h2 Movies
+
+  .row
+    each res, key in movies
+      .col-4.text-center
+        .card.mb-3
+          .card-header= res.title
+          .card-body
+            .row
+              .col-4.title Planets
+              .col-4.title Characters
+              .col-4.title Species
+
+              .col-4
+                ul
+                  each val, key in res.planets
+                    li
+                      a(href= `/planet/${val.url}`)= val.name 
+              .col-4
+                ul
+                  each val, key in res.characters
+                    li
+                      a(href= `/people/${val.url}`)= val.name 
+              .col-4
+                ul
+                  each val, key in res.species
+                    li
+                      a(href= `/specie/${val.url}`)= val.name
